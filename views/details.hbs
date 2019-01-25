@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+{{>head}}
+<body>
+<div class="container">
+    {{>header}}
+    <main>
+        <h1>{{Name}}</h1>
+        <img class="cube" src="{{ImageURL}}">
+        <div class="details">
+            <p><span>Description:</span> {{Description}}</p>
+            <button onclick="window.history.back()">Back</button>
+            <p><span>Difficulty level:</span> {{Difficulty}}</p>
+        </div>
+    </main>
+</div>
+{{>footer}}
+</body>
+</html>

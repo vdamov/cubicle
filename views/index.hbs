@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+{{>head}}
+<body>
+  <div class="container">
+    {{>header}}
+    <main>
+      <h1>Browser</h1>
+      <form method="post" action="/">
+        <input type="text" class="search" name="search" placeholder="Search...">
+        <input type="number" name="from" class="difficulty" placeholder="Difficulty from..." required>
+        <span>-</span>
+        <input type="number" name="to" class="difficulty" placeholder="Difficulty to..." required>
+        <input type="submit" value="search">
+      </form>
+{{#each cube}}
+    <div class="cube">
+        <img class="cube" src="{{ImageURL}}">
+        <p class="name">{{Name}}</p>
+        <p><span>Difficulty level:</span> {{Difficulty}}</p>
+        <button onclick="window.location.href='/details/{{_id}}'">Details</button>
+    </div>
+{{else}}
+    <p>Sorry, no content matched your criteria.</p>
+{{/each}}
+    </main>
+  </div>
+{{>footer}}
+</body>
+
+</html>
