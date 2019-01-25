@@ -8,6 +8,10 @@
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/vdamov/cubicle.git"
+},
   "keywords": [],
   "author": "",
   "license": "MIT",
